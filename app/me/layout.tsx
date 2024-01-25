@@ -1,7 +1,6 @@
 import AsideNavbar from "@/components/navigation";
-import { Lusitana } from "next/font/google";
+import { lusitana } from "../font";
 
-export const lusitana = Lusitana({ subsets: ["latin"], weight: ["400"] });
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div
