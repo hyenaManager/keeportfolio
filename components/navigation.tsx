@@ -9,7 +9,7 @@ export default function AsideNavbar() {
   console.log(pathName);
 
   return (
-    <aside className="w-[20vw] border-r-2 border-white h-[100vh] p-2">
+    <aside className="w-[20vw] h-[100vh] p-2">
       <header className=" flex justify-center items-center gap-1">
         <Link href={"/"}>
           <Image
@@ -20,19 +20,17 @@ export default function AsideNavbar() {
             className=" rounded-full p-2 bg-white w-[100px] h-[100px]"
           />
         </Link>
-        <Link href={"/me"} className="text-4xl text-white">
-          ME
-        </Link>
+        <h3 className="text-4xl text-white">KEE</h3>
       </header>
       <ul className=" w-full mt-2 justify-center items-center flex flex-col gap-4 ">
         <Link
           className={clsx(
             "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-lg font-bold rounded-lg w-full ",
             {
-              " text-2xl text-red-500": pathName === "/me/contact",
+              " text-2xl text-red-500": pathName === "/me",
             }
           )}
-          href={"/me/contact"}
+          href={"/me"}
         >
           <Image
             src={"/contact.svg"}
@@ -41,9 +39,9 @@ export default function AsideNavbar() {
             alt="proifle"
             className="  bg-white w-[60px] h-[60px]"
           />
-          <h4>contact</h4>
+          <h4 className=" text-xl font-bold">ABOUT ME</h4>
         </Link>
-        <Link
+        {/* <Link
           className={clsx(
             "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-lg font-bold rounded-lg w-full ",
             {
@@ -60,10 +58,10 @@ export default function AsideNavbar() {
             className="  bg-white w-[60px] h-[60px]"
           />
           <h4>education</h4>
-        </Link>
+        </Link> */}
         <Link
           className={clsx(
-            "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-lg font-bold rounded-lg w-full ",
+            " uppercase bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-lg font-bold rounded-lg w-full ",
             {
               " text-2xl text-red-500": pathName === "/me/projects",
             }
@@ -81,7 +79,7 @@ export default function AsideNavbar() {
         </Link>
         <Link
           className={clsx(
-            "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-lg font-bold rounded-lg w-full ",
+            " uppercase bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-lg font-bold rounded-lg w-full ",
             {
               " text-2xl text-red-500": pathName === "/me/skills",
             }

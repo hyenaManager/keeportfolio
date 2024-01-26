@@ -80,11 +80,16 @@ export const JSlibraries = [
     },
     {
         id:5,
-        name:"NextJS 13",
+        name:"NextJS 13+",
         type:"",
         image:"/newNext.png"
     },
-
+    {
+        id:44,
+        name:"React Router",
+        type:"",
+        image:"/react-router-icon.svg"
+    }
 ]
 
 export const styling = [

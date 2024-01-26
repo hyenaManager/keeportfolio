@@ -16,11 +16,12 @@ export default function Page() {
           className=" rounded-full w-[300px] h-[300px] p-4 bg-white"
         />
         <p className="text-white text-2xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-          consequatur blanditiis, officiis magnam quae corrupti asperiores
-          perferendis quibusdam quo quia cupiditate quas, vel illo doloribus
-          quidem molestias nobis maxime reiciendis! Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit.
+          I am a passionate and self-motivated developer with experience in
+          various technologies. I am a dedicated learner in the field of web
+          development and programming and always feel free to learn new features
+          and new languages. I am eager to continue expanding my knowledge and
+          skills in the ever-evolving world of web development. I am open to new
+          opportunities and challenges in the industry.
         </p>
       </article>
       <Link
