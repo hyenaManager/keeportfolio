@@ -15,7 +15,7 @@ export default function ProjectHolder({ project }: { project: ProjectHolder }) {
       <Link
         href={project.link}
         target="blank"
-        className=" w-[350px] flex justify-center items-center rounded-lg "
+        className=" w-[350px] h-[40vh] flex justify-center items-center rounded-lg "
       >
         <Image
           src={project.image}
@@ -25,17 +25,23 @@ export default function ProjectHolder({ project }: { project: ProjectHolder }) {
           className=" w-[200px] h-[200px] "
         />
       </Link>
-      <article className=" flex flex-col w-[50vw] justify-start items-start p-3 gap-3 text-white">
-        <h2 className=" text-2xl uppercase text-black font-bold">
-          {" "}
-          {project.name}{" "}
+      <article className=" flex flex-col w-[40vw] h-[40vh] justify-start items-start rounded-r-3xl bg-slate-900 p-3 gap-3 text-white">
+        <h2 className=" text-2xl uppercase text-slate-100 font-bold">
+          {project.name}
         </h2>
         <Link
-          className=" text-2xl italic text-blue-600"
+          className=" text-lg italic text-blue-600 flex justify-start items-center gap-2"
           href={project.gitRepo}
           target="blank"
         >
-          Github repo
+          <Image
+            src={"/github.svg"}
+            width={100}
+            height={100}
+            alt="git"
+            className=" w-[30px] h-[30px]"
+          />
+          <h2>github repo link</h2>
         </Link>
         <p className="text-xl">{project.description}</p>
       </article>

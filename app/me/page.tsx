@@ -6,19 +6,10 @@ export default function Page() {
     <main className="w-full text-white text-2xl flex flex-col justify-start gap-2 items-center">
       <section className="w-full flex justify-start p-3 items-start flex-col">
         <h2 className=" text-4xl text-blue-600 font-extrabold uppercase">
-          Education
-        </h2>
-        <p>
-          Self motivated ,self learner not from Computer Science Universities.
-        </p>
-      </section>
-      <section className="w-full flex justify-start p-3 items-start flex-col">
-        <h2 className=" text-4xl text-blue-600 font-extrabold uppercase">
           Experiences
         </h2>
         <ul>
           <li>- work as freelancer (front-end developer) since 2023</li>
-          <li>- participated some hackathon events</li>
         </ul>
       </section>
       <section className="w-full flex justify-start p-3 items-start flex-col">
@@ -30,6 +21,16 @@ export default function Page() {
             <ImageCard
               imageData={{ image: "/telegram.svg", name: "Telegram" }}
               className="w-[70px] h-[70px]"
+            />
+          </Link>
+          <Link
+            target="blank"
+            href={"https://github.com/hyenaManager"}
+            className=""
+          >
+            <ImageCard
+              className="w-[70px] h-[70px]"
+              imageData={{ image: "/github.svg", name: "Github" }}
             />
           </Link>
           <Link
