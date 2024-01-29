@@ -4,11 +4,35 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 export default function MyProvides() {
+  const textRef = useRef(null);
+  const textAnimation = useAnimation();
+  const isInView = useInView(textRef);
+  const texts = "What you can expect from me".split(" ");
+  useEffect(() => {
+    if (isInView) {
+      textAnimation.start({ opacity: 1, x: 0 });
+    } else {
+      textAnimation.start({ opacity: 0, x: 700 });
+    }
+  }, [isInView]);
   return (
-    <section className=" flex justify-center items-center w-[90%] sm:w-[70%] gap-4 h-fit p-3 flex-col sm:flex-row flex-wrap">
-      <h2 className=" sm:text-[50px] md:text-[80px] font-extrabold space-x-2 uppercase text-white">
-        What you can expect from me
-      </h2>
+    <section className=" flex justify-start items-center w-[90%] sm:w-[80%] gap-4 h-fit p-3 flex-col sm:flex-row flex-wrap">
+      <motion.div
+        ref={textRef}
+        className="w-full gap-4 flex justify-start items-center flex-wrap"
+      >
+        {texts.map((text, index) => (
+          <motion.h2
+            key={index}
+            initial={{ opacity: 0, x: 700 }}
+            animate={textAnimation}
+            transition={{ duration: 2, delay: index / 7 }}
+            className=" text-[40px] sm:text-[50px] md:text-[80px] font-extrabold space-x-2 uppercase text-white"
+          >
+            {text}
+          </motion.h2>
+        ))}
+      </motion.div>
       {[1, 2, 3, 4].map((num) => (
         <Provide key={num} />
       ))}
@@ -22,16 +46,16 @@ const Provide = () => {
   const isInView = useInView(ref);
   useEffect(() => {
     if (isInView) {
-      animation.start({ opacity: [0.2, 0.3, 0.4, 0.6, 0.8, 0.9, 1] });
+      animation.start({ scale: [0.2, 0.3, 0.4, 0.6, 0.8, 0.9, 1] });
     } else {
-      animation.start({ opacity: 0.1 });
+      animation.start({ scale: 0.1 });
     }
   }, [isInView]);
   return (
     <motion.article
-      initial={{ opacity: 0.1 }}
+      initial={{ scale: 0.1 }}
       animate={animation}
-      transition={{ duration: 4.8, type: "spring" }}
+      transition={{ duration: 3, type: "spring" }}
       ref={ref}
       className=" flex justify-start flex-col w-[250px] sm:w-[300px] p-3 items-center rounded-tl-3xl rounded-br-3xl bg-slate-200"
     >
