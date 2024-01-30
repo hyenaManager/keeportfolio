@@ -23,11 +23,7 @@ export default function Page() {
               className="w-[70px] h-[70px]"
             />
           </Link>
-          <Link
-            target="blank"
-            href={"https://github.com/hyenaManager"}
-            className=""
-          >
+          <Link target="blank" href={"https://github.com/sui-kee"} className="">
             <ImageCard
               className="w-[70px] h-[70px]"
               imageData={{ image: "/github.svg", name: "Github" }}

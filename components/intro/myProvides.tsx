@@ -27,7 +27,7 @@ export default function MyProvides() {
             initial={{ opacity: 0, x: 700 }}
             animate={textAnimation}
             transition={{ duration: 2, delay: index / 7 }}
-            className=" text-[40px] sm:text-[50px] md:text-[80px] font-extrabold space-x-2 uppercase text-white"
+            className=" text-[40px] sm:text-[50px] md:text-[80px] font-extrabold space-x-2 uppercase text-[#BFAEA8]"
           >
             {text}
           </motion.h2>

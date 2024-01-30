@@ -3,14 +3,11 @@ import Link from "next/link";
 
 export default function ProfileCard() {
   return (
-    <section
-      id="header"
-      className=" flex justify-center items-center w-[90%] sm:w-[70%] h-fit gap-4 p-3 flex-col"
-    >
+    <section className=" flex justify-center items-center w-[90%] sm:w-[70%] h-fit gap-4 p-3 flex-col">
       <h2 className=" text-lg sm:text-xl lg:text-4xl uppercase text-white font-bold max-w-[70vw]">
-        Hello, I'm Ling Kee and welcome to my portfolio website
+        Hello, I'm Ling Kee
       </h2>
-      <article className=" flex flex-col lg:flex-row mt-7 justify-center gap-2 p-5 md:p-12 rounded-xl md:rounded-2xl lg:rounded-full bg-green-400 items-center max-w-[70vw] ">
+      <article className=" flex flex-col lg:flex-row mt-7 justify-center gap-2 p-5 md:p-12 rounded-xl md:rounded-2xl lg:rounded-full bg-[#061D26] items-center max-w-[70vw] ">
         <Image
           width={400}
           height={400}
@@ -18,7 +15,7 @@ export default function ProfileCard() {
           src={"/profile.png"}
           className=" rounded-full w-[170px] h-[170px] sm:w-[270px] sm:h-[270px] lg:w-[300px] lg:h-[300px] p-2 lg:p-4 bg-white"
         />
-        <p className="text-white text-sm sm:text-xl lg:text-2xl">
+        <p className="text-[#BFAEA8] text-sm sm:text-xl lg:text-2xl">
           I am a passionate and self-motivated developer with experience in
           various technologies. I am a dedicated learner in the field of web
           development and programming and always feel free to learn new features

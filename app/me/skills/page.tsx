@@ -11,7 +11,7 @@ import { poppins } from "@/app/font";
 export default function Page() {
   return (
     <main
-      className={`${poppins.className} w-full text-white text-4xl  flex gap-3 h-[100vh] overflow-auto justify-start flex-col`}
+      className={`${poppins.className} w-full text-white text-4xl  flex gap-3 md:h-[100vh] md:overflow-auto justify-start flex-col`}
     >
       <section className=" gap-2 w-full flex flex-col justify-center items-start p-2">
         <h3 className="text-3xl border-b-4 ">Languages</h3>

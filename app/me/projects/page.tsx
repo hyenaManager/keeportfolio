@@ -7,7 +7,7 @@ export default function Page() {
   console.log(projects, " is projects...");
 
   return (
-    <main className=" flex justify-start flex-col items-center w-full h-[100vh] overflow-auto">
+    <main className=" flex justify-start flex-col items-center w-full md:h-[100vh] md:overflow-auto gap-4 p-3">
       {/* Yoke play */}
       {projects.map((project, index) => (
         <ProjectHolder project={project} key={index} />
