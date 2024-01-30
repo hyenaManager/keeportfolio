@@ -62,14 +62,14 @@ export default function SmSideBar() {
             </Link>
             <h3 className="text-xl text-white">KEE</h3>
           </header>
-          <ul className=" w-full mt-2 justify-center items-center flex flex-col gap-4 ">
+          <ul className=" w-[30vw] mt-2 justify-center items-center flex flex-col gap-4 ">
             <Link
               onClick={(e) => {
                 e.stopPropagation();
                 setShowLinks(!showLinks);
               }}
               className={clsx(
-                "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-sm font-bold rounded-lg w-full ",
+                "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 font-bold rounded-lg w-full ",
                 {
                   " text-2xl text-red-500": pathName === "/me",
                 }
@@ -83,7 +83,7 @@ export default function SmSideBar() {
                 alt="proifle"
                 className="  bg-white w-[20px] h-[20px]"
               />
-              <h4 className=" text-sm font-bold">ABOUT ME</h4>
+              <h4 className=" text-[12px] font-bold">ABOUT ME</h4>
             </Link>
             <Link
               onClick={(e) => {

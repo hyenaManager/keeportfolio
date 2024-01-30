@@ -8,7 +8,7 @@ export default function AsideNavbar() {
   const pathName = usePathname();
 
   return (
-    <aside className="w-fit h-[100vh] p-2 hidden md:block overflow-auto ">
+    <aside className="w-[20vw] h-[100vh] p-2 hidden md:block overflow-auto ">
       <header className=" flex justify-center items-center gap-1">
         <Link href={"/"}>
           <Image
@@ -16,7 +16,7 @@ export default function AsideNavbar() {
             width={100}
             height={100}
             alt="proifle"
-            className=" rounded-full p-2 bg-white md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[70px]"
+            className=" rounded-full p-2 bg-white md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[100px]"
           />
         </Link>
         <h3 className="md:text-xl lg:text-4xl text-white">KEE</h3>
