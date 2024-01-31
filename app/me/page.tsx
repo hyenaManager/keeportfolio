@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main className="w-full text-white text-2xl flex flex-col justify-start gap-2 items-center">
+    <main className="w-full text-white h-full text-2xl flex flex-col justify-start gap-2 items-center">
       <section className="w-full flex justify-start p-3 items-start flex-col">
         <h2 className=" text-4xl text-blue-600 font-extrabold uppercase">
           Experiences
@@ -45,12 +45,6 @@ export default function Page() {
             <ImageCard
               className="w-[70px] h-[70px]"
               imageData={{ image: "/viber.svg", name: "+959425446715" }}
-            />
-          </li>
-          <li className="">
-            <ImageCard
-              className="w-[70px] h-[70px]"
-              imageData={{ image: "/gmail.svg", name: "mesutkee@gmail.com" }}
             />
           </li>
         </ul>

@@ -30,6 +30,18 @@ export const others = [
         type:"",
         image:"/vite-icon.svg"
     },
+    {
+        id:46,
+        name:"Adobe photoshop",
+        type:"",
+        image:"/adobe-photoshop.svg"
+    },
+    {
+        id:49,
+        name:"Adobe illustrator",
+        type:"",
+        image:"/adobe-illustrate.svg"
+    },
 ]
 
 export const languages = [
@@ -89,7 +101,7 @@ export const JSlibraries = [
         name:"React Router",
         type:"",
         image:"/react-router-icon.svg"
-    }
+    },
 ]
 
 export const styling = [
