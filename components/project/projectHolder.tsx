@@ -13,7 +13,7 @@ type ProjectHolder = {
 
 export default function ProjectHolder({ project }: { project: ProjectHolder }) {
   return (
-    <section className=" flex flex-col sm:flex-row justify-start bg-[#D9B504] items-center p-4 w-full gap-3 rounded-md shadow-lg">
+    <section className=" flex flex-col sm:flex-row justify-start bg-[#061D26] items-center p-4 w-full gap-3 rounded-md shadow-lg">
       <article className=" w-[350px] h-[40vh] flex flex-col gap-2 justify-center items-center rounded-md ">
         <Image
           src={project.image}
