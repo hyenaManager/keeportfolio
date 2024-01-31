@@ -11,9 +11,9 @@ export default function MyProvides() {
   const texts = "What you can expect from me".split(" ");
   useEffect(() => {
     if (isInView) {
-      textAnimation.start({ opacity: 1, x: 0 });
+      textAnimation.start({ opacity: 1 });
     } else {
-      textAnimation.start({ opacity: 0, x: 700 });
+      textAnimation.start({ opacity: 0 });
     }
   }, [isInView]);
   return (
@@ -25,9 +25,9 @@ export default function MyProvides() {
         {texts.map((text, index) => (
           <motion.h2
             key={index}
-            initial={{ opacity: 0, x: 700 }}
+            initial={{ opacity: 0 }}
             animate={textAnimation}
-            transition={{ duration: 2, delay: index / 8 }}
+            transition={{ duration: 3, delay: index / 8 }}
             className=" text-[32px] sm:text-[40px] md:text-[70px] font-extrabold space-x-2 uppercase text-[#BFAEA8]"
           >
             {text}
