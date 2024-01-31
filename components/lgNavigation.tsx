@@ -8,7 +8,8 @@ export default function AsideNavbar() {
   const pathName = usePathname();
 
   return (
-    <aside className="w-[20vw] h-[100vh] p-2 hidden md:block overflow-auto ">
+    <aside className="w-[20vw] h-[100vh] p-2 hidden md:block overflow-auto  relative">
+      <span className=" w-[10px] h-[40%] lg:h-[50%] bg-[#732020] absolute top-7 z-[-1] left-[30%]"></span>
       <header className=" flex justify-center items-center gap-1">
         <Link href={"/"}>
           <Image
@@ -16,7 +17,7 @@ export default function AsideNavbar() {
             width={100}
             height={100}
             alt="proifle"
-            className=" rounded-full p-2 bg-white md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[100px]"
+            className=" rounded-full p-2 bg-[#732020] md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[100px]"
           />
         </Link>
         <h3 className="md:text-xl lg:text-4xl text-white">KEE</h3>
@@ -24,9 +25,10 @@ export default function AsideNavbar() {
       <ul className=" w-fit mt-2 justify-center items-center flex flex-col gap-4 ">
         <Link
           className={clsx(
-            "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 md:text-sm lg:text-lg font-bold rounded-lg w-full ",
+            "bg-[#204959] border-4 border-[#732020] p-3 flex items-center justify-between gap-2 hover:text-red-500 md:text-sm lg:text-lg font-bold rounded-lg w-full ",
             {
-              " md:text-lg lg:text-2xl text-red-500": pathName === "/me",
+              " md:text-lg lg:text-2xl text-white bg-[#732020] hover:text-white":
+                pathName === "/me",
             }
           )}
           href={"/me"}
@@ -42,9 +44,9 @@ export default function AsideNavbar() {
         </Link>
         {/* <Link
           className={clsx(
-            "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 md:text-sm lg:text-lg font-bold rounded-lg w-full ",
+            "bg-[#204959] border-4 border-[#732020] p-3 flex items-center justify-between gap-2 hover:text-red-500 md:text-sm lg:text-lg font-bold rounded-lg w-full ",
             {
-              " md:text-lg lg:text-2xl text-red-500": pathName === "/me/education",
+              " md:text-lg lg:text-2xl text-white bg-[#732020] hover:text-white": pathName === "/me/education",
             }
           )}
           href={"/me/education"}
@@ -60,9 +62,9 @@ export default function AsideNavbar() {
         </Link> */}
         <Link
           className={clsx(
-            " uppercase bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 md:text-sm lg:text-lg font-bold rounded-lg w-full ",
+            " uppercase bg-[#204959] border-4 border-[#732020] p-3 flex items-center justify-between gap-2 hover:text-red-500 md:text-sm lg:text-lg font-bold rounded-lg w-full ",
             {
-              " md:text-lg lg:text-2xl text-red-500":
+              " md:text-lg lg:text-2xl text-white bg-[#732020] hover:text-white":
                 pathName === "/me/projects",
             }
           )}
@@ -79,9 +81,10 @@ export default function AsideNavbar() {
         </Link>
         <Link
           className={clsx(
-            " uppercase bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 md:text-sm lg:text-lg font-bold rounded-lg w-full ",
+            " uppercase bg-[#204959] border-4 border-[#732020] p-3 flex items-center justify-between gap-2 hover:text-red-500 md:text-sm lg:text-lg font-bold rounded-lg w-full ",
             {
-              " md:text-lg lg:text-2xl text-red-500": pathName === "/me/skills",
+              " md:text-lg lg:text-2xl text-white bg-[#732020] hover:text-white":
+                pathName === "/me/skills",
             }
           )}
           href={"/me/skills"}

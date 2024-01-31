@@ -57,7 +57,7 @@ export default function SmSideBar() {
                 width={100}
                 height={100}
                 alt="proifle"
-                className=" rounded-full p-2 bg-white w-[50px] h-[50px]"
+                className=" rounded-full p-2 bg-[#204959] w-[50px] h-[50px]"
               />
             </Link>
             <h3 className="text-xl text-white">KEE</h3>
@@ -69,7 +69,7 @@ export default function SmSideBar() {
                 setShowLinks(!showLinks);
               }}
               className={clsx(
-                "bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 font-bold rounded-lg w-full ",
+                "   bg-[#204959] p-3 flex items-center justify-between gap-2 hover:text-red-500 font-bold rounded-lg w-full ",
                 {
                   " text-2xl text-red-500": pathName === "/me",
                 }
@@ -81,7 +81,7 @@ export default function SmSideBar() {
                 width={100}
                 height={100}
                 alt="proifle"
-                className="  bg-white w-[20px] h-[20px]"
+                className="  bg-[#204959] w-[20px] h-[20px]"
               />
               <h4 className=" text-[12px] font-bold">ABOUT ME</h4>
             </Link>
@@ -91,7 +91,7 @@ export default function SmSideBar() {
                 setShowLinks(!showLinks);
               }}
               className={clsx(
-                " uppercase bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-sm font-bold rounded-lg w-full ",
+                "    uppercase bg-[#204959] p-3 flex items-center justify-between gap-2 hover:text-red-500 text-sm font-bold rounded-lg w-full ",
                 {
                   "  text-red-500": pathName === "/me/projects",
                 }
@@ -103,7 +103,7 @@ export default function SmSideBar() {
                 width={100}
                 height={100}
                 alt="proifle"
-                className="  bg-white w-[20px] h-[20px]"
+                className="  bg-[#204959] w-[20px] h-[20px]"
               />
               <h4>projects</h4>
             </Link>
@@ -113,7 +113,7 @@ export default function SmSideBar() {
                 setShowLinks(!showLinks);
               }}
               className={clsx(
-                " uppercase bg-white p-3 flex items-center justify-between gap-2 hover:text-red-500 text-sm font-bold rounded-lg w-full ",
+                "    uppercase bg-[#204959] p-3 flex items-center justify-between gap-2 hover:text-red-500 text-sm font-bold rounded-lg w-full ",
                 {
                   "  text-red-500": pathName === "/me/skills",
                 }
@@ -125,7 +125,7 @@ export default function SmSideBar() {
                 width={100}
                 height={100}
                 alt="proifle"
-                className="  bg-white w-[20px] h-[20px]"
+                className="  bg-[#204959] w-[20px] h-[20px]"
               />
               <h4>skills</h4>
             </Link>

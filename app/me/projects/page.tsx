@@ -8,7 +8,7 @@ export default function Page() {
     <main className=" flex justify-start flex-col items-center w-full md:h-[100vh] md:overflow-auto gap-4 p-3">
       {/* Yoke play */}
       {projects.map((project, index) => (
-        <ProjectHolder project={project} key={index} />
+        <ProjectHolder project={project} key={index} index={index} />
       ))}
     </main>
   );
