@@ -1,4 +1,5 @@
 "use client";
+import { provides } from "@/app/me/lib/provides";
 import { useAnimation, useInView, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -16,31 +17,31 @@ export default function MyProvides() {
     }
   }, [isInView]);
   return (
-    <section className=" flex justify-start items-center w-[90%] sm:w-[80%] gap-4 h-fit p-3 flex-col sm:flex-row flex-wrap">
+    <section className=" flex justify-center items-center w-[90%] sm:w-[80%] gap-4 h-fit p-3 flex-col sm:flex-row flex-wrap">
       <motion.div
         ref={textRef}
-        className="w-full gap-4 flex justify-start items-center flex-wrap"
+        className="w-full gap-4 flex justify-center items-center flex-wrap"
       >
         {texts.map((text, index) => (
           <motion.h2
             key={index}
             initial={{ opacity: 0, x: 700 }}
             animate={textAnimation}
-            transition={{ duration: 2, delay: index / 7 }}
-            className=" text-[40px] sm:text-[50px] md:text-[80px] font-extrabold space-x-2 uppercase text-[#BFAEA8]"
+            transition={{ duration: 2, delay: index / 8 }}
+            className=" text-[32px] sm:text-[40px] md:text-[70px] font-extrabold space-x-2 uppercase text-[#BFAEA8]"
           >
             {text}
           </motion.h2>
         ))}
       </motion.div>
-      {[1, 2, 3, 4].map((num) => (
-        <Provide key={num} />
+      {provides.map((provide, index) => (
+        <Provide key={index} provide={provide} />
       ))}
     </section>
   );
 }
 
-const Provide = () => {
+const Provide = ({ provide }: any) => {
   const ref = useRef(null);
   const animation = useAnimation();
   const isInView = useInView(ref);
@@ -60,13 +61,15 @@ const Provide = () => {
       className=" flex justify-start flex-col w-[250px] sm:w-[300px] p-3 items-center rounded-tl-3xl rounded-br-3xl bg-slate-200"
     >
       <Image
-        src={"/react-icon.svg"}
+        src={provide.image}
         width={180}
         height={180}
         alt="provides"
         className=" w-[150px] h-[150px]"
       />
-      <h3 className="text-black text-sm sm:text-lg lg:text-2xl">UI/UX</h3>
+      <h3 className="text-black text-sm sm:text-lg lg:text-2xl">
+        {provide.name}
+      </h3>
     </motion.article>
   );
 };
