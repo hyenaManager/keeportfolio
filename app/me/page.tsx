@@ -1,18 +1,14 @@
 import ImageCard from "@/components/card/imageCard";
+import Experiences from "@/components/me/experience";
+import PersonalInformation from "@/components/me/personalInformation";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <main className="w-full text-white h-full text-2xl flex flex-col justify-start gap-2 items-center">
-      <section className="w-full flex justify-start p-3 items-start flex-col">
-        <h2 className=" text-4xl text-blue-600 font-extrabold uppercase">
-          Experiences
-        </h2>
-        <ul>
-          <li>- work as freelancer (front-end developer) since 2023</li>
-        </ul>
-      </section>
-      <section className="w-full flex justify-start p-3 items-start flex-col">
+      <Experiences />
+      <PersonalInformation />
+      {/* <section className="w-full flex justify-start p-3 items-start flex-col">
         <h2 className=" text-4xl text-blue-600 font-extrabold uppercase">
           Contact me
         </h2>
@@ -48,7 +44,7 @@ export default function Page() {
             />
           </li>
         </ul>
-      </section>
+      </section> */}
     </main>
   );
 }

@@ -43,7 +43,7 @@ export default function ProjectHolder({
     },
   ];
   return (
-    <section className=" flex flex-col justify-start bg-[#061D26] items-center p-4 w-full gap-3 rounded-md shadow-lg">
+    <section className=" flex flex-col justify-start bg-[#061D26] items-center w-full gap-3 rounded-md shadow-lg">
       <article className=" relative w-full min-h-[70vh] p-2 flex flex-col gap-2 justify-end items-center rounded-md ">
         <Image
           src={project_list[index].lg}
@@ -52,7 +52,7 @@ export default function ProjectHolder({
           placeholder="blur"
           // width={700}
           // height={500}
-          className=" w-full bg-top object-cover hidden sm:block"
+          className=" w-full bg-top object-cover hidden sm:block rounded-md"
         />
         <Image
           src={project_list[index].sm}
